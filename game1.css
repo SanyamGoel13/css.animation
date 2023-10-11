@@ -1,0 +1,48 @@
+.container{
+    height:500px;
+    width:500px;
+    background-color:greenyellow; 
+    margin:0 auto;
+}
+.container .box{
+    height:50px;
+    width:50px;
+    background-color:red;
+    border: solid 5px;
+    border-color:black;
+    display:inline-block;
+}
+.container .player{
+    transform:translateY(225px); 
+    background-color:blue;
+    animation:move 4s infinite paused;
+}
+.block{
+    margin-left: 50px;
+    animation:bo ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.block.one{
+    animation-duration: 20s;
+}
+.block.two{
+    animation-duration: 4s;
+}
+.block.three{
+    animation-duration: 1s;
+}
+.container:active .player {
+     animation-play-state: running;
+}
+
+@keyframes bo{
+    50%{
+         transform:translateY(450px);
+    }
+}
+@keyframes move {
+    50%{
+        transform: translateX(450px) translateY(225px);
+    }
+}
